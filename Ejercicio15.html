@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA - CALCULAR LA TABLA DE MULTIPLICAR </h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+// se declara la variable multiplicador
+	var multiplicador = 1
+
+	imprimir("WHILE");
+// mientras la variable multiplicador sea menor o igual a 10 
+	while (multiplicador <= 10) {
+        // Se imprimirá el número 7 multiplicado por el número inicial de la condición 
+		imprimir(7 * multiplicador);
+		multiplicador++; 
+        // el multiplicador incrementará en 1 hasta alcanzar la condición menor o igual a 10
+
+	}
+
+	
+// 
+	imprimir("FOR");
+	// en la sentencia for se declara la variable multiplicador , se coloca su condición, y el incremento
+	for (var multiplicador = 1;multiplicador <= 10;multiplicador++) {
+    // se imprime por cada iteración el número 7 multiplicado por el multiplicador
+		imprimir(7 * multiplicador);
+
+
+	}
+
+
+</script>
