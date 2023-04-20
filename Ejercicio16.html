@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA JUEGO DE GENERACIÓN DE UN RECTANGULO</h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+        
+		
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+// For que define las lineas que se van a generar por cada iteración 
+// Las lineas tienen que incrementar hasta 3
+// Las lineas se incrementan en 1
+	for(var lineas = 1; lineas <= 3; lineas++) {
+// For anidado que define columnas, comienzan en 1
+// Inician las columnas en 1 y se incrementan hasta 10, incrementando en 1 en cada iteración
+		for (var columnas = 1; columnas <= 10; columnas++){
+		
+			document.write("*");
+
+            //Una vez entrando al for anidado se iran imprimiendo los asteriscos
+
+		}
+
+		saltarLinea();
+        // se genera un salto de línea en cada iteración 
+
+	} 
+  
+	saltarLinea();
+	imprimir("fin");
+
+
+
+</script>
