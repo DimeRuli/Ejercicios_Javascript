@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3t</title>
+</head>
+<body>
+    <p>Problema</p>
+    <p>¿Cuántos años de diferencia tienes con tu hermano? 
+        Escribe un programa que muestre el mensaje ¨Nuestra diferencia de edad es¨, 
+        concatenando el resultado de la diferencia de tu edad con la de tu hermano (o de un amigo). 
+        La respuesta puede dar negativa, sin duda. No olvides de usar 
+        las funciones saltarLinea e imprimir y de incluir la etiqueta 
+        para resolver problemas de acentuación. No necesitas enviar 
+        la respuesta, solo basta crear un programa, probar y verificar si todo funciona. 
+        ¡Si tienes alguna duda no dejes de postearla en el foro!</p>
+
+    <p>Respuesta</p>
+
+    <p>La edad de mi hermano es 30</p>
+    <p>Mi edad es 28</p>
+    <script>
+    
+    // declaración de variables en donde se especifica la edad de mi hermano y mi edad
+    var edadh = 30;
+    var edady = 28;
+
+    // operación que obtendra la diferencia de edades
+    
+    var totalEdades = edadh - edady;
+
+    // Primero la función mostrarAlerta tiene un mensaje. Es decir mostrará algo al usuario
+    // Este mensaje que mostrará al usuario será en formato de alerta
+
+    function mostrarAlerta(mensaje) {
+        alert(mensaje);
+    }
+    
+    //En esta sección se declara la función mostrarAlerta seguido del mensaje que va mostrar
+    //agregando el resultado de la operación de las variables y un mensaje final      
+    
+    mostrarAlerta("La diferencia de edad con mi hermano es de: " + totalEdades + " años");
+
+    //-------------------------------------------------------------------------------------
+    
+    //Funcion saltar linea. no contiene parametros y su función es insertar espacios 
+    //a través del document write
+
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    //Función imprimir. 
+    //Su parametro es un mensaje ¿De que tipo?. No sé define en la línea 59
+    //El mensaje en la línea 60 se define como document write
+    //Se agrega además la función de saltar linea
+
+    function imprimir(mensaje) {
+      document.write(mensaje);
+      saltarLinea();
+    }
+    
+    //Como se definió que la función de imprimir era un mensaje y será como un document write
+    //se inserta el mensaje y el total de edades. que es una función declarada previamente
+    imprimir("Nuestra diferencia de edad con mi hermano es de : " + totalEdades + " años");
+    // function imprimir (mensaje)
+</script>
+
+</body>
+</html>
