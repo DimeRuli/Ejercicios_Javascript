@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA IMC</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");
+       
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    
+    // Declaración de la función y sus variables. Las cuales, deberán de ser
+    // especificadas
+    function calcularImc(peso,altura,nombre){
+    // Operación que permitirá obtener el Imc, utilizando dos de las variables
+    // especificadas
+    imc = peso / (altura*altura);
+    // Resultado que el navegador presentará anexando el nombre, y el resultado 
+    // de la formula del IMC
+    imprimir("El imc calculado de " + nombre + " es " + imc);
+
+    //1. Nombramiento de la función y variables
+    //2. Formula de la función 
+    //3. Visualización de lo que mostrará en el navegador. es decir la impresión 
+    //4. Utilización de la funcióin para un caso en especifico 
+
+   }
+
+    // Utilización de la formula, dándole las variables especificadas en la función
+    calcularImc(64,1.62,"Ruli");
+    
+</script>
