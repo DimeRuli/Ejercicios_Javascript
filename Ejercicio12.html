@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA - AÑO MUNDIAL DE LA FIFA </h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+    // declaración de la variable anhoMundial
+  	var anhoMundial = 1930;
+    // declaración de la variable limite, la cual es un parseInt, que significa que lo introducido en el prompt será transformado a un número entero
+	var limite = parseInt(prompt("Ingrese el año del mundial que deseas consultar "))
+
+   // declaracion de la sentencia while que significa "Mientras"
+   // la declaración nos dice, mientras anhoMundial sea menor o igual a la variable limite
+	while (anhoMundial <= limite) {
+ // se va a imprimir el 1930 que es la variable anhoMundial
+		imprimir("Hubo mundial de la FIFA en el año " + anhoMundial);
+		// Esta formula nos dice que una vez entre el while a anhoMundial se le sumaran 4 con la finalidad de alcanzar el limite puesto por el usuario
+        // entra anhoMundial en 1930, suma 4 y vuelve a entrar al while
+        // una vez llegado al limite se detiene
+        anhoMundial = anhoMundial + 4;
+		
+	}
+// sino se cumple la condición del while automaticamente entramos a la impresión del fin 
+	imprimir("No hay más registros del mundial")
+
+</script>
