@@ -1,0 +1,82 @@
+
+ 
+
+<meta charset="UTF-8">
+
+<h1>PROGRAMA CALCULAR IMC</h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+
+    //función que calcula el IMC usando como variables el peso y la altura
+	function calcularImc(peso,altura) {
+
+        // como resultado a retornar se solicita el número que surga de la operación
+		return (peso / (altura * altura));
+	
+	}
+
+    // Dentro de esta linea se declara la variable nombre y se solicita al usuario insertarlo 
+    var nombre = prompt("infome su nombre");
+
+    // Dentro de esta linea se declara la variable pesoInformado
+    // Además, dentro del promtp se agrega el nombre insertado y el peso ingresado
+	var pesoInformado = prompt(nombre + ", infome su peso");
+	// Además, dentro del promtp se agrega el nombre insertado y la altura
+    var alturaInformado = prompt(nombre + ",infome su altura");
+	// se declara la variable imcCalculado que es igual a la función calcularImc, donde se indica
+    // que las variables de peso y altura son peso informado y alturainformado
+	var imcCalculado = calcularImc(pesoInformado,alturaInformado);
+    //la función imprimir agrega el nombre del prompt y el imcCalulado
+	imprimir(nombre + ", su imc calculado es: " + imcCalculado);
+
+    //Sentencia if para cuando el peso es MENOR a 18.5 
+	if (imcCalculado < 18.5) { 
+		
+		imprimir("IMC abajo de lo recomendado");
+	}
+   
+    //sentencia if para cuando el peso es MAYOR o igual a 18.5
+	if (imcCalculado >= 18.5) {
+    
+
+        // PEROOOOO MENOOOOR a 25
+		if (imcCalculado < 25){
+
+			imprimir("IMC está dentro del intervalo normal");
+
+		} 
+		
+	}
+	 //sentencia if para cuando el peso es MAYOR o igual a 25
+	if (imcCalculado >= 25) {
+        //PEROOOO MENOR A 30
+
+		if (imcCalculado < 30){
+
+			imprimir("IMC considerado como sobrepeso");
+
+		} 
+		
+	}
+	////sentencia if para cuando el peso es MAYOR o igual a 30
+	if (imcCalculado >= 30) { 
+		imprimir("IMC considerado como obesidad")
+	}
+	
+</script>
