@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA - CALCULAR LA MEDIA DE LAS EDADES DE UNA FAMILIA </h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+	
+	// Se declara la variable numeroMiembros. La cual recoje un valor partir del prompt. En donde este valor es transformado a un número entero
+	var numeroMiembros = parseInt(prompt("Ingrese la cantidad de miembros de su familia"));
+	// Se declara la variable contador para poder tener la inicializacióin y el incremento en la condición
+    var contador = 1;
+    // Se declara la variable totalEdadees. La cual funcionará para poder insertar la edad de los familiares
+	var totalEdades = 0;
+
+
+    // La sentencia while permite evaluar que MIENTRAS el contador sea menor al número de miembros de la familia
+    // entrara para solicitar la edad de cada familiar
+    // una vez finalizado guardará el total de las edades de todos los familiares
+	while (contador <= numeroMiembros) {
+
+		edad = parseInt(prompt("ingrese la edad del familiar"));
+		totalEdades = totalEdades + edad;
+		contador++;
+        // se declara el contador++ para incrementar el contador en 1 cada vez que entre la sentencia 
+
+	} 
+
+    // una vez contemplada el total de edades de todos los miembros se dividirá entre el número de los miembros
+    // consiguiendo de esta manera la media de edades 
+	mediaEdades = totalEdades/numeroMiembros;
+
+	imprimir("La media de las edades de la familia es " + mediaEdades);
+    // dentro de la función imprimir se imprimen la media de edades
+
+	imprimir("fin");
+
+
+</script>
