@@ -1,0 +1,83 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA JUEGO DE ADIVINACION </h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+    
+  // se declara la variablenumeroPensado la cual es un número redondeado que se obtiene a través de la función math random. Este se multiplica x10 porque el random es un número decimal
+	var numeroPensado = Math.round(Math.random()*10);
+    // se declara la variable intentos que es igual a 3
+	var intentos = 3;
+    // se declara la variable contador que es igual a 1 debido a que necesitamos que while tenga una iteración
+	var contador = 1;
+
+	
+   // se declara la variable "While" que dice que si el contador es menor o igual a los intentos 
+   // por ejemplo el contador empieza en 1, entra. Si el usuario no acertó vuele a entrar, y ahora es 2
+   // vuelve a entrar y ahora es 3, en este punto acaba el while porque ya cumplió con el limite de intentos
+	while (contador <= intentos) {
+  // una vez entrado el contador, le solicita al usuario a través del prompt que ingrese un número 
+  // entre 0 y 10
+		var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"));
+// si el número pensado (El cual se declaró arriba) es igual al número lanzado, se muestra el alert
+		if (numeroPensado == numeroLanzado){
+// Se imprime en el alert la iteración o intento en que el usuario acertó además del número pensaod
+			alert("usted acertó, en el intento " + intentos + " el numero pensado era " + numeroPensado);
+			break;
+            // la función break rompre el while y termina la ejecución del progrma
+
+		}
+// De otro modo si el usuario no acerta en la primera iteración se muestra el mensaje
+// De otro modo si el usuario no acerta en la segunda iteración se muestra el mensaje
+// De otro modo si el usuario no acerta en la tercera iteración se muestra el mensaje
+		else {
+
+			alert("usted erró");
+		
+		}
+
+		contador++;
+
+        // se declara el contador ++ para indicar que se sume 1 en cada iteración 
+        // se declara al final porque es cuando el codigo acabó de ejecutarse
+
+	}
+
+    // si el número pensado es igual al numero lanzado
+    
+	if (numeroPensado == numeroLanzado){
+
+// se imprime el intento y el número pensado
+
+		imprimir("usted acertó, en el intento " + intentos + " el numero pensado era " + numeroPensado);
+
+	}
+
+	else {
+        // una vez acabando la ejecución y sino le atinó se imprime en pantalla el numero pesado
+		imprimir("usted erró, el numero pensado era " + numeroPensado);
+	
+	}
+
+
+
+	imprimir("fin");
+
+
+
+</script>
