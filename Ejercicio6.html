@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA IMC</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");
+       
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    
+    // Declaración de la función y sus variables. Las cuales, deberán de ser
+    // especificadas en la operación 
+    function calcularImc(peso,altura){
+    // Operación que permitirá obtener el Imc, utilizando dos de las variables
+    // especificadas
+
+    // Es una buena práctica hacer funciones objetivas que realicen máxima una instrucción, 
+    // un solo calculo. Es decir una función a la vez. que retorne un solo valor 
+    // Las instrucciones quen no competan a la función es mejor dejarlas fuera de ella
+
+
+    imc = peso / (altura*altura);
+    // Resultado que el navegador presentará,basado en 
+    // la formula del IMC
+    return imc;
+    // colocamos el return debido a que necesitamos regresar el valor de la función 
+    // si el navegador presenta UNDEFINED es porque : se omitió
+    // el valor de alguna variable 
+    // si el return regresa el resultado todo está correcto
+
+    //1. Nombramiento de la función y variables
+    //2. Formula de la función 
+    //3. Visualización de lo que mostrará en el navegador. es decir la impresión 
+    //4. Utilización de la función para un caso en especifico 
+
+   }
+
+  imprimir("El promedio del imc calculando de Ruli y yoc es: " +(calcularImc(71, 1.72 ) + calcularImc(75,1.73))/2);
+    // en este ejemplo imprimimos y utilizamos la función. la traemos especificando los valores de las variables agregando 
+    // la división para obtener el promedio 
+</script>
+ 
+/
