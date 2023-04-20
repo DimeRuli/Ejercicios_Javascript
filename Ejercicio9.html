@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA JUEGO DE ADIVINACION </h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+    // declaración de las variables. 
+    // La función math.round nos redondea al número más cercano declarado por el math random
+    // La función Math.random nos genera un numero al azar
+    // Se multiplica por 10 el numero del math random porque el número que trae al azar es un 
+    // número con decimales
+
+	var numeroPensado = Math.round(Math.random()*10);
+
+    //La función parseInt toma el valor ingresado por el usaurio, que en este caso puede ser un string y lo transforma en un número entero
+    // La función prompt nos permite insertar número a través de la pantañpña
+	var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"))
+    //la condición if nos dice que si el número pensado es igual al número lanzado acertamos en la prueba
+    // el doble igual nos indica que si los datos de las variables son las mismas entra el if
+	if (numeroPensado == numeroLanzado){
+
+    // se imprime  lo siguiente si se cumple la condición 
+		imprimir("usted acertó")
+
+	}
+// si la primera condición no es verdadera se imprime este bloque de código 
+	else {
+        // se imprime lo siguiente sino se cumple la condicion 
+		imprimir("usted erró, el número pensado era " + numeroPensado)
+	
+	}
+
+
+</script>
