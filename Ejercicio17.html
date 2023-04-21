@@ -1,0 +1,104 @@
+<meta charset="UTF-8">
+
+<h1>Generación de rostro de Minecraft en canvas</h1>
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+var pantalla = document.querySelector("canvas");
+// Esta variable conecta la etiqueta canvas mediante el uso de selectores.
+// El selector permite encontrar y seleccionar elementos del modelo de objeto del documento (DOM), el cual Facilita una representación estructurada del html (Head, Body, Elementos de cada uno de ellos)
+// En este caso dentro del dom, tengo el canvas, por lo mismo uso un selector para manipularlo
+var pincel = pantalla.getContext("2d");
+// esta variable me permite pasarle el contenido de la pantalla en dos dimensiones, es decir en largo y ancho
+
+// Lienzo CANVAS
+pincel.fillStyle = "black";
+// el comando Fillstyle me permite definir el color del canvas. ya que es una propieda o caractaristica del canvas
+pincel.fillRect(0,0,600,400);
+// Una vez declarado el canvas usamos la función pincel para dibujar dentro de el. 
+// Se utiliza el fillRect ya que este canvas se rellenara con rectangulos.
+// los dos primeros parametros hacen sentido a la posición, es decir, que va a comenzar en el eje (0) del eje x y (0) del eje Y
+// Depués le indicamos que a partir de sus respectivos ejes con valor 0 tomará 600 de largo y 400 de ancho 
+
+// CUADRO 1 
+
+pincel.fillStyle = "purple";
+pincel.fillRect(125,50,350,300);
+// el primer valor es el punto de inicio en el eje x y y. 
+// El primer valor cuenta 125 px del eje x
+// El primer valor cuenta 50 px del eje y
+// El primer cuadrado se dibuja en las coordenadas (125x,50y)
+// Las dimensiones del cuadrado son de 350x300 px
+// Largo 350 ancho 300
+
+pincel.fillStyle = "black";
+pincel.fillRect(175,110,90,90);
+// el primer valor es el punto de inicio en el eje x y y. 
+// El primer valor cuenta 175 px del eje x
+// El primer valor cuenta 110 px del eje y
+// El primer cuadrado se dibuja en las coordenadas (175x,110y)
+// Las dimensiones del cuadrado son de 90x90 px
+// Largo 90 ancho 90
+
+pincel.fillStyle = "black";
+pincel.fillRect(335,110,90,90);
+// el primer valor es el punto de inicio en el eje x y y. 
+// El primer valor cuenta 335 px del eje x
+// El primer valor cuenta 110 px del eje y
+// El primer cuadrado se dibuja en las coordenadas (335x,110y)
+// Las dimensiones del cuadrado son de 90x90 px
+// Largo 90 ancho 90
+
+pincel.fillStyle = "black";
+pincel.fillRect(265,200,70,100);
+// el primer valor es el punto de inicio en el eje x y y. 
+// El primer valor cuenta 265 px del eje x
+// El primer valor cuenta 200 px del eje y
+// El primer cuadrado se dibuja en las coordenadas (265x,200y)
+// Las dimensiones del cuadrado son de 70x100 px
+// Largo 100 ancho 70
+
+
+
+pincel.fillStyle = "black";
+pincel.fillRect(225,240,40,110);
+// el primer valor es el punto de inicio en el eje x y y. 
+// El primer valor cuenta 225 px del eje x
+// El primer valor cuenta 240 px del eje y
+// El primer cuadrado se dibuja en las coordenadas (225x,240y)
+// Las dimensiones del cuadrado son de 40x110 px
+// Largo 110 ancho 40
+
+pincel.fillStyle = "black";
+pincel.fillRect(335,240,40,110);
+// el primer valor es el punto de inicio en el eje x y y. 
+// El primer valor cuenta 335 px del eje x
+// El primer valor cuenta 240 px del eje y
+// El primer cuadrado se dibuja en las coordenadas (335x,240y)
+// Las dimensiones del cuadrado son de 40x110 px
+// Largo 110 ancho 40
+
+
+
+
+
+
+
+
+/*___________________________________________________*/
+//COMANDOS UTILES
+
+//pincel.beginPath(); 
+
+// declaro que quiero empezar a dibujar en el canvas, es decir iniciamos un camino
+// se define una ruta o una dirección, lo que hará será comenzar un nuevo camino. Es decir nos permite dibujar
+// desde un punto especifico del canvas. Para ello llamamos está función y le tenemos que pasar sus variables para poder dibujar
+
+//pincel.moveTo(50,50);
+//Le decimmos en este puntos las cordenadas en donde vamos a empezar a dibujar es decir, le comentamos que queremos posicionarnos o movernos a una coordenada en especifica
+
+// pincel.fill();
+// para rellenar las figuras que empiezan a partir de una linea como son del begin Path
+</script>
