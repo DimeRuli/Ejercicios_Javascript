@@ -1,0 +1,57 @@
+<meta charset="UTF-8">
+
+<h1>Generación de rostro de Minecraft en canvas</h1>
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+function dibujarCuadrado(x,y,color){
+// Dentro de la función definimos los ejes x y y, debido a que debemos de indicar donde se posicionarán los cuadrados que generemos, además la variable color nos permite colocar cualquier color 
+var pantalla = document.querySelector("canvas");
+// Esta variable conecta la etiqueta canvas mediante el uso de selectores.
+// El selector permite encontrar y seleccionar elementos del modelo de objeto del documento (DOM), el cual Facilita una representación estructurada del html (Head, Body, Elementos de cada uno de ellos)
+// En este caso dentro del dom, tengo el canvas, por lo mismo uso un selector para manipularlo
+var pincel = pantalla.getContext("2d");
+// esta variable me permite pasarle el contenido de la pantalla en dos dimensiones, es decir en largo y ancho
+
+pincel.fillStyle = color;
+// el comando Fillstyle me permite definir el color del canvas. ya que es una propieda o caractaristica del canvas
+
+pincel.fillRect(x,y,50,50);
+// indicamos dentro del rectangulo los ejes x y y , ya que se generaran rellandolos con variables, solo especificamos sus dimensiones 50x50
+// Una vez declarado el canvas usamos la función pincel para dibujar dentro de el. 
+// Se utiliza el fillRect ya que este canvas se rellenara con rectangulos.
+// los dos primeros parametros hacen sentido a la posición, es decir, eje x y eje y
+// Depués le indicamos que a partir de sus respectivos ejes con valor 0 tomará 50 de largo y 50 de ancho 
+
+pincel.strokeStyle = "black";
+// Esta función nos permite dibujar un contorno, un margen con relación a los parametros que le indiquemos en las siguientes dimensiones
+pincel.strokeRect(x,y,50,50);
+// esta función nos permite indicar en donde se ubicará el marco
+
+}
+var x = 0; 
+// declaramos la variable para el while
+while(x < 600){
+    // Colocamos su condición 
+  dibujarCuadrado(x,0,"red")
+    // Definimos donde dibujará el cuadrado
+  dibujarCuadrado(x,50,"yellow")
+  dibujarCuadrado(x,100,"green")
+  x = x + 50;
+  // colocamos el incremento de cada cuadrado
+  // x empieza en 0, y en cada iteracion suma 50
+}
+
+for(x=0; x < 600; x = x + 50) {
+// colocamos el valor de x, definimos su condición, por ultimo el incremento, basandonos que x vale 0 y en cada iteración sumará 50
+    dibujarCuadrado(x,200,"red")  
+    
+  
+} 
+
+
+
+
+</script>
